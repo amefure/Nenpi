@@ -8,9 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+   @State var selectedTag = 1
+   @FocusState var isInputActive:Bool  // ナンバーパッドのフォーカス
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        TabView(selection: $selectedTag){
+            CalcNenpiView().tabItem{
+                Image(systemName: "fuelpump.circle")
+                Text("Nenpi")
+                
+            }.tag(1)
+            .focused($isInputActive)
+            CalcPriceView().tabItem{
+                Image(systemName: "car.circle")
+                Text("Price")
+                    
+                    
+            }.tag(2)
+            .focused($isInputActive)
+            
+        }
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()  // 右寄せにする
+                Button("閉じる") {
+                    isInputActive = false
+                }
+            }
+        }
+        
     }
 }
 

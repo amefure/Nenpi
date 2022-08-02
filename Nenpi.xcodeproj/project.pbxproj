@@ -11,6 +11,8 @@
 		1268069B286FB7D700EAAEBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1268069A286FB7D700EAAEBF /* ContentView.swift */; };
 		1268069D286FB7DC00EAAEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1268069C286FB7DC00EAAEBF /* Assets.xcassets */; };
 		126806A0286FB7DC00EAAEBF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1268069F286FB7DC00EAAEBF /* Preview Assets.xcassets */; };
+		126806A7286FDC5600EAAEBF /* CalcNenpiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126806A6286FDC5600EAAEBF /* CalcNenpiView.swift */; };
+		126806AB2870646500EAAEBF /* CalcPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126806AA2870646500EAAEBF /* CalcPriceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		1268069A286FB7D700EAAEBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1268069C286FB7DC00EAAEBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1268069F286FB7DC00EAAEBF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		126806A6286FDC5600EAAEBF /* CalcNenpiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcNenpiView.swift; sourceTree = "<group>"; };
+		126806AA2870646500EAAEBF /* CalcPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcPriceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				12680698286FB7D700EAAEBF /* NenpiApp.swift */,
 				1268069A286FB7D700EAAEBF /* ContentView.swift */,
+				126806AA2870646500EAAEBF /* CalcPriceView.swift */,
+				126806A6286FDC5600EAAEBF /* CalcNenpiView.swift */,
 				1268069C286FB7DC00EAAEBF /* Assets.xcassets */,
 				1268069E286FB7DC00EAAEBF /* Preview Content */,
 			);
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1268069B286FB7D700EAAEBF /* ContentView.swift in Sources */,
+				126806A7286FDC5600EAAEBF /* CalcNenpiView.swift in Sources */,
 				12680699286FB7D700EAAEBF /* NenpiApp.swift in Sources */,
+				126806AB2870646500EAAEBF /* CalcPriceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
