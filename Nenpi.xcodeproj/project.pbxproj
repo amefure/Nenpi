@@ -7,15 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121A7A6828CA0A2100DEC6BD /* NenpiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A7A6728CA0A2100DEC6BD /* NenpiData.swift */; };
+		121A7A6A28CA0BDF00DEC6BD /* ListNenpiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A7A6928CA0BDF00DEC6BD /* ListNenpiView.swift */; };
+		121A7A6C28CA0E1B00DEC6BD /* RowNenpiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A7A6B28CA0E1B00DEC6BD /* RowNenpiView.swift */; };
+		121A7A6F28CA0E8C00DEC6BD /* DetailNenpiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A7A6E28CA0E8C00DEC6BD /* DetailNenpiView.swift */; };
+		121A7A7128CA93A100DEC6BD /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A7A7028CA93A100DEC6BD /* InputView.swift */; };
+		121A7A7328CC0A5400DEC6BD /* RewardButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A7A7228CC0A5400DEC6BD /* RewardButtonView.swift */; };
+		12442D1B28C9493B00025B9C /* AdMobViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12442D1A28C9493B00025B9C /* AdMobViewModels.swift */; };
+		12442D1D28C9498700025B9C /* FileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12442D1C28C9498600025B9C /* FileController.swift */; };
 		12680699286FB7D700EAAEBF /* NenpiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12680698286FB7D700EAAEBF /* NenpiApp.swift */; };
 		1268069B286FB7D700EAAEBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1268069A286FB7D700EAAEBF /* ContentView.swift */; };
 		1268069D286FB7DC00EAAEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1268069C286FB7DC00EAAEBF /* Assets.xcassets */; };
 		126806A0286FB7DC00EAAEBF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1268069F286FB7DC00EAAEBF /* Preview Assets.xcassets */; };
 		126806A7286FDC5600EAAEBF /* CalcNenpiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126806A6286FDC5600EAAEBF /* CalcNenpiView.swift */; };
 		126806AB2870646500EAAEBF /* CalcPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126806AA2870646500EAAEBF /* CalcPriceView.swift */; };
+		894372E72FD33F593D77D72F /* Pods_Nenpi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B965EEFEEA27A81508D826 /* Pods_Nenpi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		121A7A6728CA0A2100DEC6BD /* NenpiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NenpiData.swift; sourceTree = "<group>"; };
+		121A7A6928CA0BDF00DEC6BD /* ListNenpiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNenpiView.swift; sourceTree = "<group>"; };
+		121A7A6B28CA0E1B00DEC6BD /* RowNenpiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowNenpiView.swift; sourceTree = "<group>"; };
+		121A7A6E28CA0E8C00DEC6BD /* DetailNenpiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNenpiView.swift; sourceTree = "<group>"; };
+		121A7A7028CA93A100DEC6BD /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		121A7A7228CC0A5400DEC6BD /* RewardButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardButtonView.swift; sourceTree = "<group>"; };
+		12442D1828C9487700025B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		12442D1A28C9493B00025B9C /* AdMobViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobViewModels.swift; sourceTree = "<group>"; };
+		12442D1C28C9498600025B9C /* FileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileController.swift; sourceTree = "<group>"; };
 		12680695286FB7D700EAAEBF /* Nenpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nenpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12680698286FB7D700EAAEBF /* NenpiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NenpiApp.swift; sourceTree = "<group>"; };
 		1268069A286FB7D700EAAEBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +41,9 @@
 		1268069F286FB7DC00EAAEBF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		126806A6286FDC5600EAAEBF /* CalcNenpiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcNenpiView.swift; sourceTree = "<group>"; };
 		126806AA2870646500EAAEBF /* CalcPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcPriceView.swift; sourceTree = "<group>"; };
+		7098A8A2D8A9D17B31D10DBC /* Pods-Nenpi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nenpi.debug.xcconfig"; path = "Target Support Files/Pods-Nenpi/Pods-Nenpi.debug.xcconfig"; sourceTree = "<group>"; };
+		B4B965EEFEEA27A81508D826 /* Pods_Nenpi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nenpi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9B04C278DDF14DCFD25F9CA /* Pods-Nenpi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nenpi.release.xcconfig"; path = "Target Support Files/Pods-Nenpi/Pods-Nenpi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,17 +51,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894372E72FD33F593D77D72F /* Pods_Nenpi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		121A7A6D28CA0E2B00DEC6BD /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				121A7A7028CA93A100DEC6BD /* InputView.swift */,
+				121A7A6B28CA0E1B00DEC6BD /* RowNenpiView.swift */,
+				121A7A7228CC0A5400DEC6BD /* RewardButtonView.swift */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		12442D1928C9492100025B9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12442D1C28C9498600025B9C /* FileController.swift */,
+				12442D1A28C9493B00025B9C /* AdMobViewModels.swift */,
+				121A7A6728CA0A2100DEC6BD /* NenpiData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1268068C286FB7D700EAAEBF = {
 			isa = PBXGroup;
 			children = (
 				12680697286FB7D700EAAEBF /* Nenpi */,
 				12680696286FB7D700EAAEBF /* Products */,
+				286930C9AC0937F967788910 /* Pods */,
+				89E8DFFBA2A85D9313397DEC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,10 +99,15 @@
 		12680697286FB7D700EAAEBF /* Nenpi */ = {
 			isa = PBXGroup;
 			children = (
+				12442D1828C9487700025B9C /* Info.plist */,
 				12680698286FB7D700EAAEBF /* NenpiApp.swift */,
 				1268069A286FB7D700EAAEBF /* ContentView.swift */,
 				126806AA2870646500EAAEBF /* CalcPriceView.swift */,
 				126806A6286FDC5600EAAEBF /* CalcNenpiView.swift */,
+				121A7A6928CA0BDF00DEC6BD /* ListNenpiView.swift */,
+				121A7A6E28CA0E8C00DEC6BD /* DetailNenpiView.swift */,
+				121A7A6D28CA0E2B00DEC6BD /* ViewComponents */,
+				12442D1928C9492100025B9C /* Models */,
 				1268069C286FB7DC00EAAEBF /* Assets.xcassets */,
 				1268069E286FB7DC00EAAEBF /* Preview Content */,
 			);
@@ -73,6 +122,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		286930C9AC0937F967788910 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7098A8A2D8A9D17B31D10DBC /* Pods-Nenpi.debug.xcconfig */,
+				C9B04C278DDF14DCFD25F9CA /* Pods-Nenpi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		89E8DFFBA2A85D9313397DEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4B965EEFEEA27A81508D826 /* Pods_Nenpi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 126806A3286FB7DC00EAAEBF /* Build configuration list for PBXNativeTarget "Nenpi" */;
 			buildPhases = (
+				580D3733CA7804B2096B5978 /* [CP] Check Pods Manifest.lock */,
 				12680691286FB7D700EAAEBF /* Sources */,
 				12680692286FB7D700EAAEBF /* Frameworks */,
 				12680693286FB7D700EAAEBF /* Resources */,
+				2B49642182D3C16865E38560 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +206,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B49642182D3C16865E38560 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nenpi/Pods-Nenpi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nenpi/Pods-Nenpi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nenpi/Pods-Nenpi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		580D3733CA7804B2096B5978 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nenpi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		12680691286FB7D700EAAEBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -145,8 +255,16 @@
 			files = (
 				1268069B286FB7D700EAAEBF /* ContentView.swift in Sources */,
 				126806A7286FDC5600EAAEBF /* CalcNenpiView.swift in Sources */,
+				12442D1B28C9493B00025B9C /* AdMobViewModels.swift in Sources */,
+				12442D1D28C9498700025B9C /* FileController.swift in Sources */,
+				121A7A6828CA0A2100DEC6BD /* NenpiData.swift in Sources */,
+				121A7A7328CC0A5400DEC6BD /* RewardButtonView.swift in Sources */,
 				12680699286FB7D700EAAEBF /* NenpiApp.swift in Sources */,
 				126806AB2870646500EAAEBF /* CalcPriceView.swift in Sources */,
+				121A7A6A28CA0BDF00DEC6BD /* ListNenpiView.swift in Sources */,
+				121A7A7128CA93A100DEC6BD /* InputView.swift in Sources */,
+				121A7A6C28CA0E1B00DEC6BD /* RowNenpiView.swift in Sources */,
+				121A7A6F28CA0E8C00DEC6BD /* DetailNenpiView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +387,7 @@
 		};
 		126806A4286FB7DC00EAAEBF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7098A8A2D8A9D17B31D10DBC /* Pods-Nenpi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -278,6 +397,7 @@
 				DEVELOPMENT_TEAM = CGD79LB65H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nenpi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,7 +408,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ame.dev.Nenpi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ame.Nenpi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -298,6 +418,7 @@
 		};
 		126806A5286FB7DC00EAAEBF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9B04C278DDF14DCFD25F9CA /* Pods-Nenpi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -307,6 +428,7 @@
 				DEVELOPMENT_TEAM = CGD79LB65H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nenpi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -317,7 +439,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ame.dev.Nenpi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ame.Nenpi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

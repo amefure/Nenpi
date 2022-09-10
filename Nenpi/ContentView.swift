@@ -8,28 +8,45 @@
 import SwiftUI
 
 struct ContentView: View {
-   @State var selectedTag = 1
-   @FocusState var isInputActive:Bool  // ナンバーパッドのフォーカス
+    init(){
+          UITableView.appearance().backgroundColor = UIColor.gray
+      }
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    @State var selectedTag = 1
+    @FocusState var isInputActive:Bool  // ナンバーパッドのフォーカス
+    @ObservedObject var nenpiData = AllNenpiData()
     
     
     var body: some View {
         
         TabView(selection: $selectedTag){
-            CalcNenpiView().tabItem{
+            CalcNenpiView().environmentObject(nenpiData).tabItem{
                 Image(systemName: "fuelpump.circle")
                 Text("Nenpi")
                 
-            }.tag(1)
-            .focused($isInputActive)
+            }.tag(1).focused($isInputActive)
+            
+            // MARK: - View
             CalcPriceView().tabItem{
                 Image(systemName: "car.circle")
                 Text("Price")
-                    
-                    
-            }.tag(2)
-            .focused($isInputActive)
+                
+                
+            }.tag(2).focused($isInputActive)
+            
+            // MARK: - View
+            ListNenpiView().environmentObject(nenpiData)
+                .tabItem{
+                Image(systemName: "car.circle")
+                Text("Price")
+            }.tag(3)
+            
+            
             
         }
+        .font(.system(size: 20))
+        .accentColor(.orange)
+        .environment(\.colorScheme, .dark)
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {
                 Spacer()  // 右寄せにする

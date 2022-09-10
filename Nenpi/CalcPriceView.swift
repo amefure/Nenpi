@@ -29,7 +29,7 @@ struct CalcPriceView: View {
     func changeNum (_ str:String) -> Int{
         guard let num = Int(str) else {
             // 文字列の場合
-            return 0
+            return 1
         }
         return num
     }
@@ -37,59 +37,20 @@ struct CalcPriceView: View {
     var body: some View {
         
         VStack {
+            
+            // MARK: - Icon
             Image(systemName: "car.circle")
                 .resizable(resizingMode: .stretch)
             .frame(width: 150.0, height: 150.0)
-            .padding(.bottom,100.0)
+            .padding(.bottom,(UIScreen.main.bounds.height < 750 ? 30 : 145.0))
             .foregroundColor((calcPrice(distance: distance, nenpi: nenpi, cost: cost) == 0) ?  Color.white : Color.orange)
             
-            
-            HStack(spacing: 20){
-                Text("走行距離")
-                    .frame(width: 100)
-                TextField("km", text: $distance)
-                    .frame(width: 100)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)
-                    .multilineTextAlignment(TextAlignment.trailing)
-                    .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-
-                    
-                    
-            }.frame(width: 200,alignment: .trailing)
-             
-            
+            VStack{
+                InputView(text: $distance, title: "走行距離", placeholder: "km").padding(.top,60)
+                InputView(text: $nenpi, title: "燃費", placeholder: "km/ℓ")
+                InputView(text: $cost, title: "単価", placeholder: "¥")
+            }.frame(height: 200)
                 
-            
-            HStack(spacing: 20){
-                Text("燃費")
-                    .frame(width: 100)
-                TextField("km/ℓ", text: $nenpi)
-                    .frame(width: 100)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)
-                    .multilineTextAlignment(TextAlignment.trailing)
-                    .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-                   
-                  
-    
-                
-            }.frame(width: 200,alignment: .trailing)
-                
-            HStack(spacing: 20){
-                Text("単価")
-                    .frame(width: 100)
-                TextField("¥", text: $cost)
-                    .frame(width: 100)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)
-                    .multilineTextAlignment(TextAlignment.trailing)
-                    .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-                    
-                   
-                
-            }.frame(width: 200,alignment: .trailing)
-            
             
             HStack (alignment: .bottom,spacing: 20){
                 Text("料金：")
@@ -103,6 +64,7 @@ struct CalcPriceView: View {
             }.frame(width: 300, height: 80)
             
             
+            AdMobBannerView().frame(width:UIScreen.main.bounds.width,height:50).padding(.top,90)
         }
 
         .padding()
