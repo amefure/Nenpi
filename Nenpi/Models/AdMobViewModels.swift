@@ -17,7 +17,9 @@ struct AdMobBannerView: UIViewRepresentable {
         banner.adUnitID = "ca-app-pub-3940256099942544/2934735716" // 自身の広告IDに置き換える
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         banner.rootViewController = windowScene?.windows.first!.rootViewController
-        banner.load(GADRequest())
+        let request = GADRequest()
+        request.scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        banner.load(request)
         return banner // 最終的にインスタンスを返す
     }
 
@@ -40,7 +42,9 @@ class Reward: NSObject, ObservableObject ,GADFullScreenContentDelegate {
 
     // リワード広告の読み込み
     func loadReward() {
-        GADRewardedAd.load(withAdUnitID: "ca-app-pub-3940256099942544/1712485313", request: GADRequest(),completionHandler: { (ad, error) in
+        let request = GADRequest()
+        request.scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        GADRewardedAd.load(withAdUnitID: "ca-app-pub-3940256099942544/1712485313", request: request, completionHandler: { (ad, error) in
             if let _ = error {
                 // 読み込みに失敗しました
                 self.rewardLoaded = false

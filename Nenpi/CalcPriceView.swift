@@ -19,15 +19,23 @@ struct CalcPriceView: View {
             return 0
         }
         
-        let distanceNum = changeNum(distance)
+        let distanceNum = changeDouble(distance)
         let nenpiNum = changeNum(nenpi)
         let costNum = changeNum(cost)
-        let result = round(Double(distanceNum / nenpiNum * costNum))
+        let result = round(distanceNum / Double(nenpiNum) * Double(costNum))
         return Int(result)
     }
     
     func changeNum (_ str:String) -> Int{
         guard let num = Int(str) else {
+            // 文字列の場合
+            return 1
+        }
+        return num
+    }
+    
+    func changeDouble (_ str:String) -> Double{
+        guard let num = Double(str) else {
             // 文字列の場合
             return 1
         }
@@ -40,8 +48,8 @@ struct CalcPriceView: View {
             
             // MARK: - Icon
             Image(systemName: "car.circle")
-                .resizable(resizingMode: .stretch)
-            .frame(width: 150.0, height: 150.0)
+            .resizable(resizingMode: .stretch)
+            .frame(width: UIScreen.main.bounds.height < 750 ? 100.0 : 150.0, height: UIScreen.main.bounds.height < 750 ? 100.0 : 150.0)
             .padding(.bottom,(UIScreen.main.bounds.height < 750 ? 30 : 145.0))
             .foregroundColor((calcPrice(distance: distance, nenpi: nenpi, cost: cost) == 0) ?  Color.white : Color.orange)
             

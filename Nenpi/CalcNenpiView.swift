@@ -26,20 +26,22 @@ struct CalcNenpiView: View {
     @State var isClick:Bool = false
     @State var isLimitAlert:Bool = false        // 保存制限ポップアップアラート
     // MARK: - プロパティ
-    func calcNenpi (milage:String,refueling:String) -> Int{
+    func calcNenpi (milage:String,refueling:String) -> Double{
         if milage == "" ||  refueling == ""{
             return 0
         }
         
         let milageNum = changeNum(milage)
         let refuelingNum = changeNum(refueling)
-        let result = round(Double(milageNum / refuelingNum))
-        return Int(result)
+        let result = Double(milageNum / refuelingNum)
+//        let result = round(Double(milageNum / refuelingNum))
+        return ceil(result * 100)/100
+//        return Double(result)
     }
     
     
-    func changeNum (_ str:String) -> Int{
-        guard let num = Int(str) else {
+    func changeNum (_ str:String) -> Double{
+        guard let num = Double(str) else {
             // 文字列の場合
             return 1
         }
@@ -61,7 +63,7 @@ struct CalcNenpiView: View {
             // MARK: - Icon
             Image(systemName: "fuelpump.circle")
                 .resizable(resizingMode: .stretch)
-                .frame(width: 150.0, height: 150.0)
+                .frame(width: UIScreen.main.bounds.height < 750 ? 100.0 : 150.0, height: UIScreen.main.bounds.height < 750 ? 100.0 : 150.0)
                 .padding(.bottom,(UIScreen.main.bounds.height < 750 ? 30 : 145.0))
                 .foregroundColor((calcNenpi(milage: milage, refueling: refueling) == 0 || cost == "") ?  Color.white : Color.orange)
             
@@ -93,7 +95,7 @@ struct CalcNenpiView: View {
             // MARK: - Nenpi
             HStack (alignment: .bottom,spacing: 20){
                 Text("燃費：")
-                Text("\(calcNenpi(milage: milage, refueling: refueling))")
+                Text("\((String(format: "%.1f", calcNenpi(milage: milage, refueling: refueling))))")
                     .font(.title)
                     .multilineTextAlignment(.trailing)
                     .lineLimit(1)
@@ -109,7 +111,7 @@ struct CalcNenpiView: View {
                     isLimitAlert = true
                 }else{
                     if calcNenpi(milage: milage, refueling: refueling) != 0 && cost != "" {
-                        fileController.saveJson(NenpiData(milage: changeNum(milage), refueling: changeNum(refueling), cost: changeNum(cost), nenpi: calcNenpi(milage: milage, refueling: refueling)))
+                        fileController.saveJson(NenpiData(milage: changeNum(milage), refueling: changeNum(refueling), cost: Int(changeNum(cost)), nenpi: calcNenpi(milage: milage, refueling: refueling)))
                         nenpiData.setAllData()
                         resetInput()
                     }

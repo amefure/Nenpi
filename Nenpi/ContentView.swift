@@ -37,8 +37,8 @@ struct ContentView: View {
             // MARK: - View
             ListNenpiView().environmentObject(nenpiData)
                 .tabItem{
-                Image(systemName: "car.circle")
-                Text("Price")
+                Image(systemName:"list.bullet")
+                Text("List")
             }.tag(3)
             
             

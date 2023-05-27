@@ -24,7 +24,7 @@ struct DetailNenpiView: View {
             VStack{
                 Text("燃費").padding(5).background(.orange).cornerRadius(10)
                 HStack{
-                    Text("\(item.nenpi)").font(.system(size: 40)).foregroundColor(.orange)
+                    Text("\(String(format: "%.1f", item.nenpi))").font(.system(size: 40)).foregroundColor(.orange)
                     Text("km/ℓ").offset(x: 0, y: 5)
                 }
             }
@@ -38,14 +38,14 @@ struct DetailNenpiView: View {
             VStack{
                 Text("給油量").padding(5).background(.orange).cornerRadius(10)
                 HStack{
-                    Text("\(item.refueling)").font(.system(size: 40)).foregroundColor(.orange)
+                    Text("\(String(format: "%.1f", item.refueling))").font(.system(size: 40)).foregroundColor(.orange)
                     Text("ℓ").offset(x: 0, y: 5)
                 }
             }
             VStack{
                 Text("ガソリン単価").padding(5).background(.orange).cornerRadius(10)
                 HStack{
-                    Text("\(item.cost / item.refueling)").font(.system(size: 40)).foregroundColor(.orange)
+                    Text("\(String(format: "%.1f", Double(item.cost) / item.refueling))").font(.system(size: 40)).foregroundColor(.orange)
                     Text("円").offset(x: 0, y: 5)
                 }
             }

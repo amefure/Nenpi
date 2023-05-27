@@ -15,7 +15,7 @@ struct RewardButtonView: View {
     @AppStorage("LastAcquisitionDate") var lastAcquisitionDate = ""
     var body: some View {
         VStack{
-            Text("広告を見て保存容量を追加する")
+            Text("短い広告を視聴して保存容量を3つ追加する").font(.system(size:UIScreen.main.bounds.height < 900 ? 15 : 20))
             Rectangle()
             .foregroundColor(.gray)
             .frame(width: UIScreen.main.bounds.width ,height: 2)
@@ -31,9 +31,10 @@ struct RewardButtonView: View {
                 }
             }, label: {
                 Image(systemName: "play.circle")
+                Text("広告を視聴する")
             }).padding().background(.orange).foregroundColor(.white).cornerRadius(10).padding()
             
-            Text("容量：\(fileController.loadLimitTxt())")
+            Text("現在の容量：\(fileController.loadLimitTxt())")
         }.background(.clear)
         .onAppear() {
             reward.loadReward()

@@ -23,7 +23,7 @@ struct InputView: View {
             TextField(placeholder, text: $text)
                 .frame(width: 120)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .keyboardType(.numberPad)
+                .keyboardType(.decimalPad)
                 .multilineTextAlignment(TextAlignment.trailing)
                 .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
         }.frame(width: 200,alignment: .center)

@@ -10,10 +10,10 @@ import Foundation
 struct NenpiData: Identifiable,Codable,Equatable {
 
     var id = UUID()             // 一意の値
-    var milage:Int              // 走行距離数
-    var refueling:Int           // 給油量
+    var milage:Double           // 走行距離数
+    var refueling:Double        // 給油量
     var cost:Int                // 料金
-    var nenpi:Int               // 燃費
+    var nenpi:Double            // 燃費
     var car:String  = "myCar"   // 車の名前
     var time:String = {         // 初期値に現在の日付
         
