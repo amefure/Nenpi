@@ -19,28 +19,16 @@ struct CalcPriceView: View {
             return 0
         }
         
-        let distanceNum = changeDouble(distance)
-        let nenpiNum = changeNum(nenpi)
-        let costNum = changeNum(cost)
+        let distanceNum = dataTypeConverter.convertStrToDouble(distance)
+        let nenpiNum = dataTypeConverter.convertStrToInt(nenpi)
+        let costNum = dataTypeConverter.convertStrToInt(cost)
         let result = round(distanceNum / Double(nenpiNum) * Double(costNum))
         return Int(result)
     }
     
-    func changeNum (_ str:String) -> Int{
-        guard let num = Int(str) else {
-            // 文字列の場合
-            return 1
-        }
-        return num
-    }
+    private let dataTypeConverter = DataTypeConverter()
+    private let deviceSizeVM = DeviceSizeViewModel()
     
-    func changeDouble (_ str:String) -> Double{
-        guard let num = Double(str) else {
-            // 文字列の場合
-            return 1
-        }
-        return num
-    }
     
     var body: some View {
         
@@ -48,17 +36,14 @@ struct CalcPriceView: View {
             
             // MARK: - Icon
             Image(systemName: "car.circle")
-            .resizable(resizingMode: .stretch)
-            .frame(width: UIScreen.main.bounds.height < 750 ? 100.0 : 150.0, height: UIScreen.main.bounds.height < 750 ? 100.0 : 150.0)
-            .padding(.bottom,(UIScreen.main.bounds.height < 750 ? 30 : 145.0))
-            .foregroundColor((calcPrice(distance: distance, nenpi: nenpi, cost: cost) == 0) ?  Color.white : Color.orange)
+                .ex_ResizableTopIconModifier()
             
             VStack{
                 InputView(text: $distance, title: "走行距離", placeholder: "km").padding(.top,60)
                 InputView(text: $nenpi, title: "燃費", placeholder: "km/ℓ")
                 InputView(text: $cost, title: "単価", placeholder: "¥")
             }.frame(height: 200)
-                
+            
             
             HStack (alignment: .bottom,spacing: 20){
                 Text("料金：")
@@ -68,27 +53,21 @@ struct CalcPriceView: View {
                     .lineLimit(1)
                     .foregroundColor((calcPrice(distance: distance, nenpi: nenpi, cost: cost) == 0) ?  Color.white : Color.orange)
                     .frame(width: 150,alignment: .trailing)
-                    Text("円")
+                Text("円")
             }.frame(width: 300, height: 80)
             
             
-            AdMobBannerView().frame(width:UIScreen.main.bounds.width,height:50).padding(.top,90)
+            AdMobBannerView().frame(height:50).padding(.top,90)
         }
-
-        .padding()
         .frame( maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(red: 0.5, green: 0.6, blue: 0.5))
-        .foregroundColor(Color.white)
         .ignoresSafeArea()
-        
-            
-        
     }
 }
 
 struct CalcPriceView_Previews: PreviewProvider {
     static var previews: some View {
         CalcPriceView()
-//            .previewInterfaceOrientation(.landscapeRight)
+        //            .previewInterfaceOrientation(.landscapeRight)
     }
 }

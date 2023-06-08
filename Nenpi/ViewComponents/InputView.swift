@@ -14,7 +14,7 @@ struct InputView: View {
     var placeholder:String
     
     @Environment(\.colorScheme) var colorScheme: ColorScheme
-    
+    @FocusState var isInputActive:Bool  // ナンバーパッドのフォーカス
     var body: some View {
         HStack(spacing: 20){
             Text(title)
@@ -27,6 +27,15 @@ struct InputView: View {
                 .multilineTextAlignment(TextAlignment.trailing)
                 .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
         }.frame(width: 200,alignment: .center)
+            .focused($isInputActive)
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()  // 右寄せにする
+                    Button("閉じる") {
+                        isInputActive = false
+                    }
+                }
+            }
     }
 }
 

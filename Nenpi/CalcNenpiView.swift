@@ -31,22 +31,15 @@ struct CalcNenpiView: View {
             return 0
         }
         
-        let milageNum = changeNum(milage)
-        let refuelingNum = changeNum(refueling)
+        let milageNum = dataTypeConverter.convertStrToInt(milage)
+        let refuelingNum = dataTypeConverter.convertStrToInt(refueling)
         let result = Double(milageNum / refuelingNum)
-//        let result = round(Double(milageNum / refuelingNum))
         return ceil(result * 100)/100
-//        return Double(result)
     }
     
     
-    func changeNum (_ str:String) -> Double{
-        guard let num = Double(str) else {
-            // 文字列の場合
-            return 1
-        }
-        return num
-    }
+    private let dataTypeConverter = DataTypeConverter()
+    private let deviceSizeVM = DeviceSizeViewModel()
     
     func resetInput (){
         milage = ""      // 走行距離
@@ -62,10 +55,8 @@ struct CalcNenpiView: View {
             
             // MARK: - Icon
             Image(systemName: "fuelpump.circle")
-                .resizable(resizingMode: .stretch)
-                .frame(width: UIScreen.main.bounds.height < 750 ? 100.0 : 150.0, height: UIScreen.main.bounds.height < 750 ? 100.0 : 150.0)
-                .padding(.bottom,(UIScreen.main.bounds.height < 750 ? 30 : 145.0))
-                .foregroundColor((calcNenpi(milage: milage, refueling: refueling) == 0 || cost == "") ?  Color.white : Color.orange)
+                .ex_ResizableTopIconModifier()
+           
             
             // MARK: - Input
             VStack{
@@ -81,7 +72,7 @@ struct CalcNenpiView: View {
                         InputView(text: $startMeter, title: "開始メーター", placeholder: "25000m")
                         InputView(text: $endMeter, title: "終了メーター", placeholder: "25500m")
                     }.onChange(of:[startMeter,endMeter]){newValue in
-                        milage = String(changeNum(endMeter) - changeNum(startMeter))
+                        milage = String(dataTypeConverter.convertStrToInt(endMeter) - dataTypeConverter.convertStrToInt(startMeter))
                     }
                 }else{
                     InputView(text: $milage, title: "走行距離", placeholder: "km")
@@ -111,7 +102,7 @@ struct CalcNenpiView: View {
                     isLimitAlert = true
                 }else{
                     if calcNenpi(milage: milage, refueling: refueling) != 0 && cost != "" {
-                        fileController.saveJson(NenpiData(milage: changeNum(milage), refueling: changeNum(refueling), cost: Int(changeNum(cost)), nenpi: calcNenpi(milage: milage, refueling: refueling)))
+                        fileController.saveJson(NenpiData(milage: dataTypeConverter.convertStrToDouble(milage), refueling: dataTypeConverter.convertStrToDouble(refueling), cost: Int(dataTypeConverter.convertStrToInt(cost)), nenpi: calcNenpi(milage: milage, refueling: refueling)))
                         nenpiData.setAllData()
                         resetInput()
                     }
@@ -135,16 +126,10 @@ struct CalcNenpiView: View {
                 
             // MARK: - 登録ボタン
                     
-            AdMobBannerView().frame(width:UIScreen.main.bounds.width,height:50)
-            
-        }.padding()
-            .frame( maxWidth: .infinity, maxHeight: .infinity)
+            AdMobBannerView().frame(height:50)
+        }.frame( maxWidth: .infinity, maxHeight: .infinity)
             .background(Color(red: 0.3, green: 0.3, blue: 0.3))
-            .foregroundColor(Color.white)
             .ignoresSafeArea()
-        
-        
-        
     }
 }
 
