@@ -10,7 +10,6 @@ import SwiftUI
 
 extension Image {
 
-    
     func ex_ResizableTopIconModifier() -> some View {
         self
             .resizable(resizingMode: .stretch)

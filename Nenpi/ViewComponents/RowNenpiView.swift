@@ -25,10 +25,26 @@ struct RowNenpiView: View {
             
             // メモ
             HStack{
-                Text("\(String(format: "%.1f", item.nenpi))").lineLimit(1).foregroundColor(.orange).font(.system(size: 30))
-                Text("km/ℓ").offset(x: 0, y: 5)
                 Spacer()
-                Text("\(item.cost)").lineLimit(1).foregroundColor(.orange).font(.system(size: 30))
+                
+                Text("\(String(format: "%.1f", item.nenpi))")
+                    .fontWeight(.bold)
+                    .lineLimit(1)
+                    .foregroundColor(.orange)
+                    .font(.system(size: 30))
+                    
+                
+                Text("km/ℓ")
+                
+                    .offset(x: 0, y: 5)
+                Spacer()
+                
+                Text("\(item.cost)")
+                    .fontWeight(.bold)
+                    .lineLimit(1)
+                    .foregroundColor(.orange)
+                    .font(.system(size: 30))
+                
                 Text("円").offset(x: 0, y: 5)
             }
             

@@ -17,48 +17,53 @@ struct DetailNenpiView: View {
     
     var item:NenpiData
     var body: some View {
-        VStack(){
-            Text("\(item.time)").foregroundColor(.gray)
-            Spacer()
-            
-            VStack{
-                Text("燃費").padding(5).background(.orange).cornerRadius(10)
+        
+        List{
+            Section("登録日"){
                 HStack{
+                    Spacer()
+                    Text("\(item.time)").foregroundColor(.gray)
+                }
+            }
+            Section("燃費"){
+                HStack{
+                    Spacer()
                     Text("\(String(format: "%.1f", item.nenpi))").font(.system(size: 40)).foregroundColor(.orange)
                     Text("km/ℓ").offset(x: 0, y: 5)
                 }
             }
-            VStack{
-                Text("ガソリン料金").padding(5).background(.orange).cornerRadius(10)
+            
+            Section("ガソリン料金"){
                 HStack{
+                    Spacer()
                     Text("\(item.cost)").font(.system(size: 40)).foregroundColor(.orange)
                     Text("円").offset(x: 0, y: 5)
                 }
             }
-            VStack{
-                Text("給油量").padding(5).background(.orange).cornerRadius(10)
+            
+            Section("給油量"){
                 HStack{
+                    Spacer()
                     Text("\(String(format: "%.1f", item.refueling))").font(.system(size: 40)).foregroundColor(.orange)
                     Text("ℓ").offset(x: 0, y: 5)
                 }
             }
-            VStack{
-                Text("ガソリン単価").padding(5).background(.orange).cornerRadius(10)
+            
+            Section("ガソリン単価"){
                 HStack{
+                    Spacer()
                     Text("\(String(format: "%.1f", Double(item.cost) / item.refueling))").font(.system(size: 40)).foregroundColor(.orange)
                     Text("円").offset(x: 0, y: 5)
                 }
             }
-        
-            Spacer()
-            
             
         }.toolbar{
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
                     isAlertDelete = true
                 }, label: {
-                    Image(systemName: "trash").foregroundColor(.red)
+                    Image(systemName: "trash")
+                        .foregroundColor(.red)
                 })
                 .alert(isPresented: $isAlertDelete){
                     Alert(title:Text("燃費情報を削除しますか？"),

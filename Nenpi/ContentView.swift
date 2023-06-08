@@ -13,7 +13,6 @@ struct ContentView: View {
         UITableView.appearance().backgroundColor = UIColor.gray
     }
     
-    @Environment(\.colorScheme) var colorScheme: ColorScheme
     @State var selectedTag = 1
     @ObservedObject var nenpiData = AllNenpiData()
     

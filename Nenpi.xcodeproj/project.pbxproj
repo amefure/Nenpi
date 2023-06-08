@@ -16,6 +16,9 @@
 		123364782A30B3EE00D2EB7D /* DataTypeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123364772A30B3EE00D2EB7D /* DataTypeConverter.swift */; };
 		1233647B2A30BAF100D2EB7D /* DeviceSizeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233647A2A30BAF100D2EB7D /* DeviceSizeViewModel.swift */; };
 		1233647E2A30BD8A00D2EB7D /* CustomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233647D2A30BD8A00D2EB7D /* CustomModifier.swift */; };
+		123364832A31974B00D2EB7D /* EntryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123364822A31974B00D2EB7D /* EntryButtonView.swift */; };
+		123364852A31988400D2EB7D /* CalculationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123364842A31988400D2EB7D /* CalculationViewModel.swift */; };
+		123364872A3199CD00D2EB7D /* ResultDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123364862A3199CD00D2EB7D /* ResultDisplayView.swift */; };
 		12442D1B28C9493B00025B9C /* AdMobViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12442D1A28C9493B00025B9C /* AdMobViewModels.swift */; };
 		12442D1D28C9498700025B9C /* FileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12442D1C28C9498600025B9C /* FileController.swift */; };
 		12680699286FB7D700EAAEBF /* NenpiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12680698286FB7D700EAAEBF /* NenpiApp.swift */; };
@@ -37,6 +40,9 @@
 		123364772A30B3EE00D2EB7D /* DataTypeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeConverter.swift; sourceTree = "<group>"; };
 		1233647A2A30BAF100D2EB7D /* DeviceSizeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSizeViewModel.swift; sourceTree = "<group>"; };
 		1233647D2A30BD8A00D2EB7D /* CustomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifier.swift; sourceTree = "<group>"; };
+		123364822A31974B00D2EB7D /* EntryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryButtonView.swift; sourceTree = "<group>"; };
+		123364842A31988400D2EB7D /* CalculationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewModel.swift; sourceTree = "<group>"; };
+		123364862A3199CD00D2EB7D /* ResultDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDisplayView.swift; sourceTree = "<group>"; };
 		12442D1828C9487700025B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		12442D1A28C9493B00025B9C /* AdMobViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobViewModels.swift; sourceTree = "<group>"; };
 		12442D1C28C9498600025B9C /* FileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileController.swift; sourceTree = "<group>"; };
@@ -68,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				121A7A7028CA93A100DEC6BD /* InputView.swift */,
+				123364862A3199CD00D2EB7D /* ResultDisplayView.swift */,
 				121A7A6B28CA0E1B00DEC6BD /* RowNenpiView.swift */,
 				121A7A7228CC0A5400DEC6BD /* RewardButtonView.swift */,
 			);
@@ -80,6 +87,7 @@
 				1233647A2A30BAF100D2EB7D /* DeviceSizeViewModel.swift */,
 				12442D1A28C9493B00025B9C /* AdMobViewModels.swift */,
 				123364772A30B3EE00D2EB7D /* DataTypeConverter.swift */,
+				123364842A31988400D2EB7D /* CalculationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -90,6 +98,15 @@
 				1233647D2A30BD8A00D2EB7D /* CustomModifier.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		123364812A31973000D2EB7D /* CalcNenpiView */ = {
+			isa = PBXGroup;
+			children = (
+				126806A6286FDC5600EAAEBF /* CalcNenpiView.swift */,
+				123364822A31974B00D2EB7D /* EntryButtonView.swift */,
+			);
+			path = CalcNenpiView;
 			sourceTree = "<group>";
 		};
 		12442D1928C9492100025B9C /* Models */ = {
@@ -125,8 +142,8 @@
 				12442D1828C9487700025B9C /* Info.plist */,
 				12680698286FB7D700EAAEBF /* NenpiApp.swift */,
 				1268069A286FB7D700EAAEBF /* ContentView.swift */,
+				123364812A31973000D2EB7D /* CalcNenpiView */,
 				126806AA2870646500EAAEBF /* CalcPriceView.swift */,
-				126806A6286FDC5600EAAEBF /* CalcNenpiView.swift */,
 				121A7A6928CA0BDF00DEC6BD /* ListNenpiView.swift */,
 				121A7A6E28CA0E8C00DEC6BD /* DetailNenpiView.swift */,
 				121A7A6D28CA0E2B00DEC6BD /* ViewComponents */,
@@ -278,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				123364872A3199CD00D2EB7D /* ResultDisplayView.swift in Sources */,
 				1268069B286FB7D700EAAEBF /* ContentView.swift in Sources */,
 				126806A7286FDC5600EAAEBF /* CalcNenpiView.swift in Sources */,
 				12442D1B28C9493B00025B9C /* AdMobViewModels.swift in Sources */,
@@ -285,8 +303,10 @@
 				121A7A6828CA0A2100DEC6BD /* NenpiData.swift in Sources */,
 				121A7A7328CC0A5400DEC6BD /* RewardButtonView.swift in Sources */,
 				123364782A30B3EE00D2EB7D /* DataTypeConverter.swift in Sources */,
+				123364852A31988400D2EB7D /* CalculationViewModel.swift in Sources */,
 				1233647B2A30BAF100D2EB7D /* DeviceSizeViewModel.swift in Sources */,
 				12680699286FB7D700EAAEBF /* NenpiApp.swift in Sources */,
+				123364832A31974B00D2EB7D /* EntryButtonView.swift in Sources */,
 				126806AB2870646500EAAEBF /* CalcPriceView.swift in Sources */,
 				121A7A6A28CA0BDF00DEC6BD /* ListNenpiView.swift in Sources */,
 				1233647E2A30BD8A00D2EB7D /* CustomModifier.swift in Sources */,
@@ -420,22 +440,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.4;
+				CURRENT_PROJECT_VERSION = 2.5;
 				DEVELOPMENT_ASSET_PATHS = "\"Nenpi/Preview Content\"";
 				DEVELOPMENT_TEAM = CGD79LB65H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Nenpi/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ame.Nenpi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -451,22 +472,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.4;
+				CURRENT_PROJECT_VERSION = 2.5;
 				DEVELOPMENT_ASSET_PATHS = "\"Nenpi/Preview Content\"";
 				DEVELOPMENT_TEAM = CGD79LB65H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Nenpi/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ame.Nenpi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
