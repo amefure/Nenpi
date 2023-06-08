@@ -13,6 +13,9 @@
 		121A7A6F28CA0E8C00DEC6BD /* DetailNenpiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A7A6E28CA0E8C00DEC6BD /* DetailNenpiView.swift */; };
 		121A7A7128CA93A100DEC6BD /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A7A7028CA93A100DEC6BD /* InputView.swift */; };
 		121A7A7328CC0A5400DEC6BD /* RewardButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A7A7228CC0A5400DEC6BD /* RewardButtonView.swift */; };
+		123364782A30B3EE00D2EB7D /* DataTypeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123364772A30B3EE00D2EB7D /* DataTypeConverter.swift */; };
+		1233647B2A30BAF100D2EB7D /* DeviceSizeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233647A2A30BAF100D2EB7D /* DeviceSizeViewModel.swift */; };
+		1233647E2A30BD8A00D2EB7D /* CustomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233647D2A30BD8A00D2EB7D /* CustomModifier.swift */; };
 		12442D1B28C9493B00025B9C /* AdMobViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12442D1A28C9493B00025B9C /* AdMobViewModels.swift */; };
 		12442D1D28C9498700025B9C /* FileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12442D1C28C9498600025B9C /* FileController.swift */; };
 		12680699286FB7D700EAAEBF /* NenpiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12680698286FB7D700EAAEBF /* NenpiApp.swift */; };
@@ -31,6 +34,9 @@
 		121A7A6E28CA0E8C00DEC6BD /* DetailNenpiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNenpiView.swift; sourceTree = "<group>"; };
 		121A7A7028CA93A100DEC6BD /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		121A7A7228CC0A5400DEC6BD /* RewardButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardButtonView.swift; sourceTree = "<group>"; };
+		123364772A30B3EE00D2EB7D /* DataTypeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeConverter.swift; sourceTree = "<group>"; };
+		1233647A2A30BAF100D2EB7D /* DeviceSizeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSizeViewModel.swift; sourceTree = "<group>"; };
+		1233647D2A30BD8A00D2EB7D /* CustomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifier.swift; sourceTree = "<group>"; };
 		12442D1828C9487700025B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		12442D1A28C9493B00025B9C /* AdMobViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobViewModels.swift; sourceTree = "<group>"; };
 		12442D1C28C9498600025B9C /* FileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileController.swift; sourceTree = "<group>"; };
@@ -68,11 +74,28 @@
 			path = ViewComponents;
 			sourceTree = "<group>";
 		};
+		123364792A30BADD00D2EB7D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1233647A2A30BAF100D2EB7D /* DeviceSizeViewModel.swift */,
+				12442D1A28C9493B00025B9C /* AdMobViewModels.swift */,
+				123364772A30B3EE00D2EB7D /* DataTypeConverter.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1233647C2A30BD6000D2EB7D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1233647D2A30BD8A00D2EB7D /* CustomModifier.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		12442D1928C9492100025B9C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				12442D1C28C9498600025B9C /* FileController.swift */,
-				12442D1A28C9493B00025B9C /* AdMobViewModels.swift */,
 				121A7A6728CA0A2100DEC6BD /* NenpiData.swift */,
 			);
 			path = Models;
@@ -107,6 +130,8 @@
 				121A7A6928CA0BDF00DEC6BD /* ListNenpiView.swift */,
 				121A7A6E28CA0E8C00DEC6BD /* DetailNenpiView.swift */,
 				121A7A6D28CA0E2B00DEC6BD /* ViewComponents */,
+				123364792A30BADD00D2EB7D /* ViewModels */,
+				1233647C2A30BD6000D2EB7D /* Extensions */,
 				12442D1928C9492100025B9C /* Models */,
 				1268069C286FB7DC00EAAEBF /* Assets.xcassets */,
 				1268069E286FB7DC00EAAEBF /* Preview Content */,
@@ -259,9 +284,12 @@
 				12442D1D28C9498700025B9C /* FileController.swift in Sources */,
 				121A7A6828CA0A2100DEC6BD /* NenpiData.swift in Sources */,
 				121A7A7328CC0A5400DEC6BD /* RewardButtonView.swift in Sources */,
+				123364782A30B3EE00D2EB7D /* DataTypeConverter.swift in Sources */,
+				1233647B2A30BAF100D2EB7D /* DeviceSizeViewModel.swift in Sources */,
 				12680699286FB7D700EAAEBF /* NenpiApp.swift in Sources */,
 				126806AB2870646500EAAEBF /* CalcPriceView.swift in Sources */,
 				121A7A6A28CA0BDF00DEC6BD /* ListNenpiView.swift in Sources */,
+				1233647E2A30BD8A00D2EB7D /* CustomModifier.swift in Sources */,
 				121A7A7128CA93A100DEC6BD /* InputView.swift in Sources */,
 				121A7A6C28CA0E1B00DEC6BD /* RowNenpiView.swift in Sources */,
 				121A7A6F28CA0E8C00DEC6BD /* DetailNenpiView.swift in Sources */,
