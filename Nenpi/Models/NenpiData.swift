@@ -18,9 +18,9 @@ struct NenpiData: Identifiable,Codable,Equatable {
     var time: String = {         // 初期値に現在の日付
         
         let df = DateFormatter()
-        df.calendar = Calendar(identifier: .gregorian)
-        df.locale = Locale(identifier: "ja_JP")
-        df.timeZone = TimeZone(identifier: "Asia/Tokyo")
+        df.calendar = Calendar.current
+        df.locale = Locale.current
+        df.timeZone = TimeZone.current
         df.dateStyle = .short
         df.timeStyle = .none
         

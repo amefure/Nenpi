@@ -14,14 +14,20 @@ struct RowNenpiView: View {
         HStack {
             VStack {
                 // 位置調整
-                Text("Nenpi").font(.caption).foregroundColor(.gray).offset(x: 52, y: -16)
-                Text("\(item.time)").font(.caption).foregroundColor(.gray).offset(x: -10, y: -10)
+                Text("Nenpi")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                    .offset(x: 52, y: -16)
+                Text("\(item.time)")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                    .offset(x: -10, y: -10)
             }
         
             // 縦の線を表示
             Rectangle()
-            .foregroundColor(.gray)
-            .frame(width: 0.2 ,height: 30)
+                .foregroundColor(.gray)
+                .frame(width: 0.2 ,height: 30)
             
             // メモ
             HStack{
@@ -45,7 +51,8 @@ struct RowNenpiView: View {
                     .foregroundColor(.orange)
                     .font(.system(size: 30))
                 
-                Text("円").offset(x: 0, y: 5)
+                Text(L10n.priceAmountUnit)
+                    .offset(x: 0, y: 5)
             }
             
             Spacer()

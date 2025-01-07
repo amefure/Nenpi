@@ -22,13 +22,18 @@
 		12442D1D28C9498700025B9C /* JsonFileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12442D1C28C9498600025B9C /* JsonFileRepository.swift */; };
 		12680699286FB7D700EAAEBF /* NenpiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12680698286FB7D700EAAEBF /* NenpiApp.swift */; };
 		1268069B286FB7D700EAAEBF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1268069A286FB7D700EAAEBF /* RootView.swift */; };
-		1268069D286FB7DC00EAAEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1268069C286FB7DC00EAAEBF /* Assets.xcassets */; };
+		1268069D286FB7DC00EAAEBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1268069C286FB7DC00EAAEBF /* Images.xcassets */; };
 		126806A0286FB7DC00EAAEBF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1268069F286FB7DC00EAAEBF /* Preview Assets.xcassets */; };
 		126806A7286FDC5600EAAEBF /* CalcNenpiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126806A6286FDC5600EAAEBF /* CalcNenpiView.swift */; };
 		126806AB2870646500EAAEBF /* CalcPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126806AA2870646500EAAEBF /* CalcPriceView.swift */; };
 		1269EE172D2D080500DBF694 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1269EE162D2D080500DBF694 /* PrivacyInfo.xcprivacy */; };
 		1269EE192D2D080A00DBF694 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1269EE182D2D080A00DBF694 /* GoogleService-Info.plist */; };
 		1269EE1E2D2D0AD100DBF694 /* RootEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1269EE1D2D2D0ACF00DBF694 /* RootEnvironment.swift */; };
+		1269EE272D2D5EEC00DBF694 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1269EE262D2D5EEC00DBF694 /* Colors.xcassets */; };
+		1269EE2A2D2D5F0400DBF694 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1269EE282D2D5F0400DBF694 /* Localizable.strings */; };
+		1269EE2E2D2D5F3E00DBF694 /* ExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1269EE2D2D2D5F3D00DBF694 /* ExView.swift */; };
+		1269EE312D2D60A400DBF694 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1269EE2F2D2D60A400DBF694 /* Assets.swift */; };
+		1269EE322D2D60A400DBF694 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1269EE302D2D60A400DBF694 /* Strings.swift */; };
 		894372E72FD33F593D77D72F /* Pods_Nenpi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B965EEFEEA27A81508D826 /* Pods_Nenpi.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,19 +49,26 @@
 		1233647D2A30BD8A00D2EB7D /* CustomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifier.swift; sourceTree = "<group>"; };
 		123364842A31988400D2EB7D /* CalculationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationUtility.swift; sourceTree = "<group>"; };
 		123364862A3199CD00D2EB7D /* ResultDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDisplayView.swift; sourceTree = "<group>"; };
-		12442D1828C9487700025B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		12442D1828C9487700025B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12442D1A28C9493B00025B9C /* AdMobViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobViewModels.swift; sourceTree = "<group>"; };
 		12442D1C28C9498600025B9C /* JsonFileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileRepository.swift; sourceTree = "<group>"; };
 		12680695286FB7D700EAAEBF /* Nenpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nenpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12680698286FB7D700EAAEBF /* NenpiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NenpiApp.swift; sourceTree = "<group>"; };
 		1268069A286FB7D700EAAEBF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		1268069C286FB7DC00EAAEBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1268069C286FB7DC00EAAEBF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1268069F286FB7DC00EAAEBF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		126806A6286FDC5600EAAEBF /* CalcNenpiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcNenpiView.swift; sourceTree = "<group>"; };
 		126806AA2870646500EAAEBF /* CalcPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcPriceView.swift; sourceTree = "<group>"; };
 		1269EE162D2D080500DBF694 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		1269EE182D2D080A00DBF694 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1269EE1D2D2D0ACF00DBF694 /* RootEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootEnvironment.swift; sourceTree = "<group>"; };
+		1269EE262D2D5EEC00DBF694 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		1269EE292D2D5F0400DBF694 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1269EE2B2D2D5F0B00DBF694 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1269EE2C2D2D5F0C00DBF694 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1269EE2D2D2D5F3D00DBF694 /* ExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExView.swift; sourceTree = "<group>"; };
+		1269EE2F2D2D60A400DBF694 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		1269EE302D2D60A400DBF694 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		7098A8A2D8A9D17B31D10DBC /* Pods-Nenpi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nenpi.debug.xcconfig"; path = "Target Support Files/Pods-Nenpi/Pods-Nenpi.debug.xcconfig"; sourceTree = "<group>"; };
 		B4B965EEFEEA27A81508D826 /* Pods_Nenpi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nenpi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B04C278DDF14DCFD25F9CA /* Pods-Nenpi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nenpi.release.xcconfig"; path = "Target Support Files/Pods-Nenpi/Pods-Nenpi.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,12 +136,13 @@
 				1269EE182D2D080A00DBF694 /* GoogleService-Info.plist */,
 				1269EE162D2D080500DBF694 /* PrivacyInfo.xcprivacy */,
 				12442D1828C9487700025B9C /* Info.plist */,
+				1269EE252D2D5EC800DBF694 /* Generated */,
+				1269EE242D2D5EC400DBF694 /* Resources */,
 				1269EE1C2D2D08D800DBF694 /* Extension&Utility */,
 				1269EE1B2D2D08AA00DBF694 /* View */,
 				1269EE1A2D2D086300DBF694 /* Repository */,
 				123364792A30BADD00D2EB7D /* ViewModels */,
 				12442D1928C9492100025B9C /* Models */,
-				1268069C286FB7DC00EAAEBF /* Assets.xcassets */,
 				1268069E286FB7DC00EAAEBF /* Preview Content */,
 			);
 			path = Nenpi;
@@ -186,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				123364772A30B3EE00D2EB7D /* ExString.swift */,
+				1269EE2D2D2D5F3D00DBF694 /* ExView.swift */,
 				1233647D2A30BD8A00D2EB7D /* CustomModifier.swift */,
 			);
 			path = Extension;
@@ -200,6 +214,25 @@
 				121A7A7228CC0A5400DEC6BD /* RewardButtonView.swift */,
 			);
 			path = ListNenpiView;
+			sourceTree = "<group>";
+		};
+		1269EE242D2D5EC400DBF694 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1268069C286FB7DC00EAAEBF /* Images.xcassets */,
+				1269EE262D2D5EEC00DBF694 /* Colors.xcassets */,
+				1269EE282D2D5F0400DBF694 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1269EE252D2D5EC800DBF694 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				1269EE2F2D2D60A400DBF694 /* Assets.swift */,
+				1269EE302D2D60A400DBF694 /* Strings.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		286930C9AC0937F967788910 /* Pods */ = {
@@ -282,9 +315,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1269EE172D2D080500DBF694 /* PrivacyInfo.xcprivacy in Resources */,
+				1269EE2A2D2D5F0400DBF694 /* Localizable.strings in Resources */,
+				1269EE272D2D5EEC00DBF694 /* Colors.xcassets in Resources */,
 				1269EE192D2D080A00DBF694 /* GoogleService-Info.plist in Resources */,
 				126806A0286FB7DC00EAAEBF /* Preview Assets.xcassets in Resources */,
-				1268069D286FB7DC00EAAEBF /* Assets.xcassets in Resources */,
+				1268069D286FB7DC00EAAEBF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +376,8 @@
 				1268069B286FB7D700EAAEBF /* RootView.swift in Sources */,
 				126806A7286FDC5600EAAEBF /* CalcNenpiView.swift in Sources */,
 				12442D1B28C9493B00025B9C /* AdMobViewModels.swift in Sources */,
+				1269EE312D2D60A400DBF694 /* Assets.swift in Sources */,
+				1269EE322D2D60A400DBF694 /* Strings.swift in Sources */,
 				12442D1D28C9498700025B9C /* JsonFileRepository.swift in Sources */,
 				121A7A6828CA0A2100DEC6BD /* NenpiData.swift in Sources */,
 				121A7A7328CC0A5400DEC6BD /* RewardButtonView.swift in Sources */,
@@ -351,6 +388,7 @@
 				126806AB2870646500EAAEBF /* CalcPriceView.swift in Sources */,
 				1269EE1E2D2D0AD100DBF694 /* RootEnvironment.swift in Sources */,
 				121A7A6A28CA0BDF00DEC6BD /* ListNenpiView.swift in Sources */,
+				1269EE2E2D2D5F3E00DBF694 /* ExView.swift in Sources */,
 				1233647E2A30BD8A00D2EB7D /* CustomModifier.swift in Sources */,
 				121A7A7128CA93A100DEC6BD /* InputView.swift in Sources */,
 				121A7A6C28CA0E1B00DEC6BD /* RowNenpiView.swift in Sources */,
@@ -359,6 +397,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1269EE282D2D5F0400DBF694 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1269EE292D2D5F0400DBF694 /* ja */,
+				1269EE2B2D2D5F0B00DBF694 /* zh-Hant */,
+				1269EE2C2D2D5F0C00DBF694 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		126806A1286FB7DC00EAAEBF /* Debug */ = {
@@ -482,7 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.5;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Nenpi/Preview Content\"";
 				DEVELOPMENT_TEAM = CGD79LB65H;
 				ENABLE_PREVIEWS = YES;
@@ -498,7 +549,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ame.Nenpi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -514,7 +565,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.5;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Nenpi/Preview Content\"";
 				DEVELOPMENT_TEAM = CGD79LB65H;
 				ENABLE_PREVIEWS = YES;
@@ -530,7 +581,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ame.Nenpi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

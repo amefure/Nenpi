@@ -1,0 +1,50 @@
+/* 
+  Localizable.strings
+  Nenpi
+
+  Created by t&a on 2025/01/07.
+  
+*/
+
+// RootView
+"tab_nenpi" = "Fuel cost";
+"tab_price" = "Price";
+"tab_list" = "List";
+
+// CalcNenpiView
+"nenpi_calc_meter" = "Calculate by meter";
+"nenpi_calc_distance" = "Enter distance in units of seconds";
+"nenpi_start_meter" = "Start Meter";
+"nenpi_end_meter" = "End Meter";
+"nenpi_mileage" = "Mileage";
+"nenpi_refuelingt" = "Refuelingt";
+"nenpi_nenpi" = "Fuel cost";
+"nenpi_price" = "Price";
+"nenpi_enrty" = "Entry";
+
+"nenpi_enrty_limit_title" = "Registration limit reached";
+"nenpi_enrty_limit_msg" = "You can increase your storage capacity by watching ads.";
+"nenpi_enrty_success_msg" = "Fuel consumption information has been recorded.";
+
+// CalcPriceView
+"price_unit" = "Unit";
+"price_amount_unit" = "＄";
+"price_amount_unit_mark" = "＄";
+
+// DetailNenpiView
+"detail_entry_day" = "Entry Day";
+"detail_gasoline" = "Gasoline";
+"detail_delete_alert_title" = "Do you want to delete fuel consumption information?";
+
+// Reword
+"reword_watch_an_ad" = "Watch an ad";
+"reword_capacity_%@" = "Current capacity：%@";
+"reword_add_capacity" = "・You can increase storage capacity by 3 by watching ads.";
+"reword_alert_msg" = "You can only watch an ad once per day.";
+
+
+// Common
+"keyboard_close" = "close";
+"alert_delete" = "Delete";
+"alert_cancel" = "Cancel";
+"alert_notify" = "Notify";

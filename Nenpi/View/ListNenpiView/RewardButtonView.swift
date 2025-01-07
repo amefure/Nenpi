@@ -33,7 +33,7 @@ struct RewardButtonView: View {
                 }
             } label: {
                 Image(systemName: "play.circle")
-                Text("広告を視聴する")
+                Text(L10n.rewordWatchAnAd)
                     .fontWeight(.bold)
             }.padding()
                 .background(.orange)
@@ -42,22 +42,21 @@ struct RewardButtonView: View {
                 .padding()
             
             
-            Text("現在の容量：\(rootEnvironment.loadLimitTxt())個")
+            Text(L10n.rewordCapacity(rootEnvironment.loadLimitTxt()))
                 .fontWeight(.bold)
                 .padding(.bottom)
             
-            Text("・広告を視聴して保存容量を3個追加することが可能です。")
+            Text(L10n.rewordAddCapacity)
                 .font(.caption)
             
         }.background(.clear)
             .onAppear { reward.loadReward() }
             .disabled(!reward.rewardLoaded)
-            .alert(isPresented: $isAlertReward){
-                Alert(title:Text("お知らせ"),
-                      message: Text("広告を視聴できるのは1日に1回までです"),
-                      dismissButton: .default(Text("OK"),
-                                              action: {}))
-            }.padding(.bottom,30)
+            .alert(
+                isPresented: $isAlertReward,
+                title: L10n.alertNotify,
+                message: L10n.rewordAlertMsg
+            ).padding(.bottom,30)
     }
 }
 struct RewardButtonView_Previews: PreviewProvider {

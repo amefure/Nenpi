@@ -1,0 +1,49 @@
+/* 
+  Localizable.strings
+  Nenpi
+
+  Created by t&a on 2025/01/07.
+  
+*/
+
+// RootView
+"tab_nenpi" = "燃油效率";
+"tab_price" = "费用";
+"tab_list" = "List";
+
+// CalcNenpiView
+"nenpi_calc_meter" = "按米计算";
+"nenpi_calc_distance" = "请输入距离";
+"nenpi_start_meter" = "起始计数";
+"nenpi_end_meter" = "结束计数";
+"nenpi_mileage" = "里程";
+"nenpi_refuelingt" = "加油量";
+"nenpi_nenpi" = "燃油效率";
+"nenpi_price" = "费用";
+"nenpi_enrty" = "登记";
+
+"nenpi_enrty_limit_title" = "容量已达到上限";
+"nenpi_enrty_limit_msg" = "您可以通过观看广告来增加存储容量";
+"nenpi_enrty_success_msg" = "油耗信息已登记。";
+
+// CalcPriceView
+"price_unit" = "单价";
+"price_amount_unit" = "圆";
+"price_amount_unit_mark" = "￥";
+
+// DetailNenpiView日
+"detail_entry_day" = "报名日期";
+"detail_gasoline" = "汽油";
+"detail_delete_alert_title" = "您想删除油耗信息吗？";
+
+// Reword
+"reword_watch_an_ad" = "看广告";
+"reword_capacity_%@" = "当前容量：%@";
+"reword_add_capacity" = "・您可以通过观看广告来增加3个存储容量";
+"reword_alert_msg" = "您每天只能查看一次广告";
+
+// Common
+"keyboard_close" = "关闭";
+"alert_delete" = "擦除";
+"alert_cancel" = "取消";
+"alert_notify" = "注意";

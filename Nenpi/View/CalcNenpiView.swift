@@ -25,7 +25,8 @@ struct CalcNenpiView: View {
     @FocusState var isInputActive: Bool  // ナンバーパッドのフォーカス
     
     // 保存制限ポップアップアラート
-    @State private var isLimitAlert:Bool = false
+    @State private var isLimitAlert: Bool = false
+    @State private var isEntrySuccessAlert: Bool = false
     
     private func resetInput () {
         milage = ""      // 走行距離
@@ -55,28 +56,28 @@ struct CalcNenpiView: View {
                 Button(action: {
                     isClick.toggle()
                 }, label: {
-                    Text(!isClick ? "メーターで計算する" : "距離数で入力する")
+                    Text(!isClick ? L10n.nenpiCalcMeter : L10n.nenpiCalcDistance)
                 }).frame(height:50)
                     .foregroundColor(.orange)
                 
                 if isClick {
                     VStack{
-                        InputView(text: $startMeter, title: "開始メーター", placeholder: "25000m")
-                        InputView(text: $endMeter, title: "終了メーター", placeholder: "25500m")
+                        InputView(text: $startMeter, title: L10n.nenpiStartMeter, placeholder: "25000m")
+                        InputView(text: $endMeter, title: L10n.nenpiEndMeter, placeholder: "25500m")
                     }.onChange(of:[startMeter,endMeter]){newValue in
                         milage = String(endMeter.toInt() - startMeter.toInt())
                     }
                 }else{
-                    InputView(text: $milage, title: "走行距離", placeholder: "km")
+                    InputView(text: $milage, title: L10n.nenpiMileage, placeholder: "km")
                 }
-                InputView(text: $refueling, title: "給油量", placeholder: "ℓ")
-                InputView(text: $cost, title: "料金", placeholder: "¥")
+                InputView(text: $refueling, title: L10n.nenpiRefuelingt, placeholder: "ℓ")
+                InputView(text: $cost, title: L10n.nenpiPrice, placeholder: L10n.priceAmountUnitMark)
             }.frame( height: 200)
                 .focused($isInputActive)
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard) {
                         Spacer()  // 右寄せにする
-                        Button("閉じる") {
+                        Button(L10n.keyboardClose) {
                             isInputActive = false
                         }
                     }
@@ -87,7 +88,7 @@ struct CalcNenpiView: View {
             
             // MARK: - Nenpi  
             ResultDisplayView(
-                title: "燃費：",
+                title: L10n.nenpiNenpi + "：",
                 result: "\((String(format: "%.1f", CalculationUtility.calcNenpi(milage: milage, refueling: refueling))))",
                 judge: (CalculationUtility.calcNenpi(milage: milage, refueling: refueling) == 0 || cost == ""),
                 unit: "km/ℓ"
@@ -102,10 +103,11 @@ struct CalcNenpiView: View {
                     if CalculationUtility.calcNenpi(milage: milage, refueling: refueling) != 0 && cost != "" {
                         rootEnvironment.saveJson(milage: milage, refueling: refueling, cost: cost)
                         resetInput()
+                        isEntrySuccessAlert = true
                     }
                 }
             } label: {
-                Text("登録")
+                Text(L10n.nenpiEnrty)
                     .fontWeight(.bold)
                     .frame(width: 160, height: 20)
                     .padding()
@@ -115,14 +117,16 @@ struct CalcNenpiView: View {
                 
             }.disabled(CalculationUtility.calcNenpi(milage: milage, refueling: refueling) == 0)
                 .padding(.bottom,30)
-                .alert(isPresented: $isLimitAlert) {
-                    Alert(
-                        title:Text("上限に達しました"),
-                        message: Text("広告を視聴すると\n容量を増やすことができます。"),
-                        dismissButton: .default(Text("OK"))
-                    )
-                }
-            
+                .alert(
+                    isPresented: $isLimitAlert,
+                    title: L10n.nenpiEnrtyLimitTitle,
+                    message: L10n.nenpiEnrtyLimitMsg
+                )
+                .alert(
+                    isPresented: $isEntrySuccessAlert,
+                    title: L10n.alertNotify,
+                    message: L10n.nenpiEnrtySuccessMsg
+                )
             
             Spacer()
             

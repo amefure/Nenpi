@@ -16,13 +16,13 @@ struct DetailNenpiView: View {
     var body: some View {
         
         List{
-            Section("登録日") {
+            Section(L10n.detailEntryDay) {
                 HStack{
                     Spacer()
                     Text("\(item.time)").foregroundColor(.gray)
                 }
             }
-            Section("燃費"){
+            Section(L10n.nenpiNenpi) {
                 HStack{
                     Spacer()
                     Text("\(String(format: "%.1f", item.nenpi))").font(.system(size: 40)).foregroundColor(.orange)
@@ -30,15 +30,15 @@ struct DetailNenpiView: View {
                 }
             }
             
-            Section("ガソリン料金"){
+            Section(L10n.detailGasoline + L10n.nenpiPrice) {
                 HStack{
                     Spacer()
                     Text("\(item.cost)").font(.system(size: 40)).foregroundColor(.orange)
-                    Text("円").offset(x: 0, y: 5)
+                    Text(L10n.priceAmountUnit).offset(x: 0, y: 5)
                 }
             }
             
-            Section("給油量"){
+            Section(L10n.nenpiRefuelingt) {
                 HStack{
                     Spacer()
                     Text("\(String(format: "%.1f", item.refueling))").font(.system(size: 40)).foregroundColor(.orange)
@@ -46,34 +46,36 @@ struct DetailNenpiView: View {
                 }
             }
             
-            Section("ガソリン単価"){
+            Section(L10n.detailGasoline + L10n.priceUnit) {
                 HStack{
                     Spacer()
                     Text("\(String(format: "%.1f", Double(item.cost) / item.refueling))").font(.system(size: 40)).foregroundColor(.orange)
-                    Text("円").offset(x: 0, y: 5)
+                    Text(L10n.priceAmountUnit).offset(x: 0, y: 5)
                 }
             }
             
         }.toolbar{
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {
+                Button {
                     isAlertDelete = true
-                }, label: {
+                } label: {
                     Image(systemName: "trash")
                         .foregroundColor(.red)
-                })
-                .alert(isPresented: $isAlertDelete){
-                    Alert(title:Text("燃費情報を削除しますか？"),
-                          message: Text(""),
-                          primaryButton: .destructive(Text("削除する"),
-                                                      action: {
+                }.alert(
+                    isPresented: $isAlertDelete,
+                    title: L10n.detailDeleteAlertTitle,
+                    message: "",
+                    positiveButtonTitle: L10n.alertDelete,
+                    negativeButtonTitle: L10n.alertCancel,
+                    positiveButtonRole: .destructive,
+                    positiveAction: {
                         withAnimation(.linear(duration: 0.3)){
                             // 選択されたitemを削除
                             rootEnvironment.removeCash(item)
                             dismiss()
                         }
-                    }), secondaryButton: .cancel(Text("キャンセル")))
-                }
+                    }
+                )
             }
         }
     }

@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  Nenpi
+
+  Created by t&a on 2025/01/07.
+  
+*/
+
+// RootView
+"tab_nenpi" = "Nenpi";
+"tab_price" = "Price";
+"tab_list" = "List";
+
+// CalcNenpiView
+"nenpi_calc_meter" = "メーターで計算する";
+"nenpi_calc_distance" = "距離数で入力する";
+"nenpi_start_meter" = "開始メーター";
+"nenpi_end_meter" = "終了メーター";
+"nenpi_mileage" = "走行距離";
+"nenpi_refuelingt" = "給油量";
+"nenpi_nenpi" = "燃費";
+"nenpi_price" = "料金";
+"nenpi_enrty" = "登録";
+
+"nenpi_enrty_limit_title" = "登録上限に達しました";
+"nenpi_enrty_limit_msg" = "広告を視聴すると\n容量を増やすことができます。";
+"nenpi_enrty_success_msg" = "燃費情報を登録しました。";
+
+// CalcPriceView
+"price_unit" = "単価";
+"price_amount_unit" = "円";
+"price_amount_unit_mark" = "￥";
+
+// DetailNenpiView
+"detail_entry_day" = "登録日";
+"detail_gasoline" = "ガソリン";
+"detail_delete_alert_title" = "燃費情報を削除しますか？";
+
+// Reword
+"reword_watch_an_ad" = "広告を視聴する";
+"reword_capacity_%@" = "現在の容量：%@個";
+"reword_add_capacity" = "・広告を視聴して保存容量を3個追加することが可能です。";
+"reword_alert_msg" = "広告を視聴できるのは1日に1回までです。";
+
+
+
+// Common
+"keyboard_close" = "閉じる";
+"alert_delete" = "削除する";
+"alert_cancel" = "キャンセル";
+"alert_notify" = "お知らせ";
+
+
+
+
+
+
+

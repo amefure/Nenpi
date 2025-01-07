@@ -33,15 +33,15 @@ struct CalcPriceView: View {
                 .ex_ResizableTopIconModifier()
             
             VStack{
-                InputView(text: $distance, title: "走行距離", placeholder: "km").padding(.top,60)
-                InputView(text: $nenpi, title: "燃費", placeholder: "km/ℓ")
-                InputView(text: $cost, title: "単価", placeholder: "¥")
+                InputView(text: $distance, title: L10n.nenpiMileage, placeholder: "km").padding(.top,60)
+                InputView(text: $nenpi, title: L10n.nenpiNenpi, placeholder: "km/ℓ")
+                InputView(text: $cost, title: L10n.priceUnit, placeholder: L10n.priceAmountUnitMark)
             }.frame(height: 200)
                 .focused($isInputActive)
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard) {
                         Spacer()  // 右寄せにする
-                        Button("閉じる") {
+                        Button(L10n.keyboardClose) {
                             isInputActive = false
                         }
                     }
@@ -49,10 +49,10 @@ struct CalcPriceView: View {
             
             // MARK: - Price
             ResultDisplayView(
-                title: "料金：",
+                title: L10n.nenpiPrice + "：",
                 result: "\(CalculationUtility.calcPrice(distance: distance, nenpi: nenpi, cost: cost))",
                 judge: (CalculationUtility.calcPrice(distance: distance, nenpi: nenpi, cost: cost) == 0),
-                unit: "円"
+                unit: L10n.priceAmountUnit
             )
 
             Spacer()

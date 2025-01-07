@@ -24,14 +24,14 @@ struct RootView: View {
                 .environmentObject(rootEnvironment)
                 .tabItem{
                     Image(systemName: "fuelpump.circle")
-                    Text("Nenpi")
+                    Text(L10n.tabNenpi)
                 }.tag(1)
             
             // MARK: - View
             CalcPriceView()
                 .tabItem{
                     Image(systemName: "car.circle")
-                    Text("Price")
+                    Text(L10n.tabPrice)
                 }.tag(2)
             
             // MARK: - View
@@ -39,7 +39,7 @@ struct RootView: View {
                 .environmentObject(rootEnvironment)
                 .tabItem{
                     Image(systemName:"list.bullet")
-                    Text("List")
+                    Text(L10n.tabList)
                 }.tag(3)
             
         }.font(.system(size: 20))
