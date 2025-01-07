@@ -73,12 +73,12 @@ class Reward: NSObject, ObservableObject ,GADFullScreenContentDelegate {
     }
     // 現在の日付
     func nowTime() -> String{
-            let df = DateFormatter()
-            df.calendar = Calendar(identifier: .gregorian)
-            df.locale = Locale(identifier: "ja_JP")
-            df.timeZone = TimeZone(identifier: "Asia/Tokyo")
-            df.dateStyle = .short
-            df.timeStyle = .none
-            return df.string(from: Date())
+        let df = DateFormatter()
+        df.calendar = Calendar.current
+        df.locale = Locale.current
+        df.timeZone = TimeZone.current
+        df.dateStyle = .short
+        df.timeStyle = .none
+        return df.string(from: Date())
     }
 }
