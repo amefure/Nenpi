@@ -9,41 +9,40 @@ import SwiftUI
 
 struct RewardButtonView: View {
     
-    let fileController = FileController()
+    @EnvironmentObject private var rootEnvironment: RootEnvironment
     // MARK: - AdMob reward広告
-    @ObservedObject var reward = Reward()
-    @State var isAlertReward:Bool = false    // リワード広告視聴回数制限アラート
+    @ObservedObject private var reward = Reward()
+    // リワード広告視聴回数制限アラート
+    @State private var isAlertReward: Bool = false
     @AppStorage("LastAcquisitionDate") var lastAcquisitionDate = ""
     
-    private let deviceSizeVM = DeviceSizeViewModel()
-    
     var body: some View {
-        VStack{
+        VStack {
             
             Divider()
             
-            Button(action: {
+            Button {
                 // 1日1回までしか視聴できないようにする
                 if lastAcquisitionDate != reward.nowTime() {
                     reward.showReward()          //  広告配信
-                    fileController.addLimitTxt() // 報酬獲得
+                    rootEnvironment.addLimitTxt() // 報酬獲得
                     lastAcquisitionDate = reward.nowTime() // 最終視聴日を格納
                     
-                }else{
+                } else {
                     isAlertReward = true
                 }
-            }, label: {
+            } label: {
                 Image(systemName: "play.circle")
                 Text("広告を視聴する")
                     .fontWeight(.bold)
-            }).padding()
+            }.padding()
                 .background(.orange)
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .padding()
             
             
-            Text("現在の容量：\(fileController.loadLimitTxt())個")
+            Text("現在の容量：\(rootEnvironment.loadLimitTxt())個")
                 .fontWeight(.bold)
                 .padding(.bottom)
             
@@ -51,9 +50,7 @@ struct RewardButtonView: View {
                 .font(.caption)
             
         }.background(.clear)
-            .onAppear() {
-                reward.loadReward()
-            }
+            .onAppear { reward.loadReward() }
             .disabled(!reward.rewardLoaded)
             .alert(isPresented: $isAlertReward){
                 Alert(title:Text("お知らせ"),

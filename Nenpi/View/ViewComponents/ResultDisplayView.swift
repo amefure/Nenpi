@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ResultDisplayView: View {
     
-    let title:String
-    let result:String
-    let judge:Bool
-    let unit:String
+    public let title: String
+    public let result: String
+    public let judge: Bool
+    public let unit: String
     
     var body: some View {
         HStack (alignment: .bottom,spacing: 20){

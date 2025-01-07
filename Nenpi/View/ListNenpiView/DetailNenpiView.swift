@@ -8,18 +8,15 @@
 import SwiftUI
 
 struct DetailNenpiView: View {
-    @EnvironmentObject var nenpiData: AllNenpiData
+    @EnvironmentObject private var rootEnvironment: RootEnvironment
     @Environment(\.dismiss) var dismiss
+    @State private var isAlertDelete: Bool = false
     
-    let fileController = FileController()
-    // MARK: - View
-    @State var isAlertDelete:Bool = false
-    
-    var item:NenpiData
+    public var item: NenpiData
     var body: some View {
         
         List{
-            Section("登録日"){
+            Section("登録日") {
                 HStack{
                     Spacer()
                     Text("\(item.time)").foregroundColor(.gray)
@@ -71,10 +68,8 @@ struct DetailNenpiView: View {
                           primaryButton: .destructive(Text("削除する"),
                                                       action: {
                         withAnimation(.linear(duration: 0.3)){
-                            nenpiData.removeCash(item)   // 選択されたitemを削除
-                            fileController.updateJson(nenpiData.allData) // JSONファイルを更新
-                            nenpiData.setAllData() // JSONファイルをプロパティにセット
-                            
+                            // 選択されたitemを削除
+                            rootEnvironment.removeCash(item)
                             dismiss()
                         }
                     }), secondaryButton: .cancel(Text("キャンセル")))
@@ -88,5 +83,6 @@ struct DetailNenpiView: View {
 struct EditNenpiView_Previews: PreviewProvider {
     static var previews: some View {
         DetailNenpiView(item: NenpiData(milage: 0, refueling: 0, cost: 0, nenpi: 0))
+            .environmentObject(RootEnvironment())
     }
 }

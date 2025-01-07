@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RowNenpiView: View {
-    var item:NenpiData
+    var item: NenpiData
     
     var body: some View {
         HStack {

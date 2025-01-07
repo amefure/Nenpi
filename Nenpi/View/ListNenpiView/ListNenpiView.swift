@@ -9,14 +9,15 @@ import SwiftUI
 
 struct ListNenpiView: View {
     
-    @EnvironmentObject var nenpiData: AllNenpiData
+    @EnvironmentObject var rootEnvironment: RootEnvironment
     
     var body: some View {
         NavigationView{
             VStack{
-                List(nenpiData.allData.reversed()) { item in
+                List(rootEnvironment.allData.reversed()) { item in
                     NavigationLink(destination: {
-                        DetailNenpiView(item:item).environmentObject(nenpiData)
+                        DetailNenpiView(item:item)
+                            .environmentObject(rootEnvironment)
                     }, label: {
                         RowNenpiView(item:item)
                     })
@@ -24,6 +25,7 @@ struct ListNenpiView: View {
                 }.listStyle(GroupedListStyle()) // Listのスタイルを横に広げる
                 
                 RewardButtonView()
+                    .environmentObject(rootEnvironment)
             }
         }.navigationViewStyle(.stack)
     }
@@ -32,5 +34,6 @@ struct ListNenpiView: View {
 struct NenpiListView_Previews: PreviewProvider {
     static var previews: some View {
         ListNenpiView()
+            .environmentObject(RootEnvironment())
     }
 }

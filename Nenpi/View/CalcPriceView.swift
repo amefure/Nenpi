@@ -9,10 +9,6 @@ import SwiftUI
 
 struct CalcPriceView: View {
     
-    // MARK: - ViewModels
-    private let dataTypeConverter = DataTypeConverter()
-    private let deviceSizeVM = DeviceSizeViewModel()
-    private let calculationVM = CalculationViewModel()
     
     // MARK: - プロパティ
     @State var distance:String = ""     // 距離
@@ -26,6 +22,11 @@ struct CalcPriceView: View {
     var body: some View {
         
         VStack {
+            
+            AdMobBannerView()
+                .frame(height: 50)
+            
+            Spacer()
             
             // MARK: - Icon
             Image(systemName: "car.circle")
@@ -47,24 +48,22 @@ struct CalcPriceView: View {
                 }
             
             // MARK: - Price
-            ResultDisplayView(title: "料金：",
-                              result: "\(calculationVM.calcPrice(distance: distance, nenpi: nenpi, cost: cost))",
-                              judge: (calculationVM.calcPrice(distance: distance, nenpi: nenpi, cost: cost) == 0),
-                              unit: "円")
+            ResultDisplayView(
+                title: "料金：",
+                result: "\(CalculationUtility.calcPrice(distance: distance, nenpi: nenpi, cost: cost))",
+                judge: (CalculationUtility.calcPrice(distance: distance, nenpi: nenpi, cost: cost) == 0),
+                unit: "円"
+            )
 
-            
-            
-            AdMobBannerView().frame(height:50).padding(.top,90)
-        }
-        .frame( maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(red: 0.5, green: 0.6, blue: 0.5))
-        .ignoresSafeArea()
+            Spacer()
+           
+        }.frame(width: DeviceSizeUtility.deviceWidth)
+            .background(Color(red: 0.5, green: 0.6, blue: 0.5))
     }
 }
 
 struct CalcPriceView_Previews: PreviewProvider {
     static var previews: some View {
         CalcPriceView()
-        //            .previewInterfaceOrientation(.landscapeRight)
     }
 }

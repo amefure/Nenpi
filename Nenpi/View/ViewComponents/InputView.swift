@@ -9,24 +9,24 @@ import SwiftUI
 
 struct InputView: View {
     
-    @Binding var text:String
-    var title:String
-    var placeholder:String
+    @Binding var text: String
+    public var title: String
+    public var placeholder: String
     
     @Environment(\.colorScheme) var colorScheme: ColorScheme
 
     var body: some View {
-        HStack(spacing: 20){
+        HStack(spacing: 20) {
             Text(title)
                 .frame(width: 120)
-                .foregroundColor(text.isEmpty ?  Color.white : Color.orange)
+                .foregroundColor(text.isEmpty ? Color.white : Color.orange)
             TextField(placeholder, text: $text)
                 .frame(width: 120)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.decimalPad)
                 .multilineTextAlignment(TextAlignment.trailing)
                 .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-        }.frame(width: 200,alignment: .center)
+        }.frame(width: 200, alignment: .center)
             
     }
 }
